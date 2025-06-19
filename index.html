@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>劉科宏 - 電腦組裝/維修工程師 履歷</title>
+    <style>
+        /* --- 基本樣式重設與字體設定 --- */
+        :root {
+            --primary-color: #2c3e50; /* 主色調 - 深藍灰 */
+            --secondary-color: #3498db; /* 強調色 - 亮藍 */
+            --background-color: #f4f6f8; /* 背景色 */
+            --card-background-color: #ffffff; /* 卡片背景色 */
+            --text-color: #34495e; /* 主要文字顏色 */
+            --light-text-color: #7f8c8d; /* 輔助文字顏色 */
+            --border-color: #e0e0e0; /* 邊框顏色 */
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, '微軟正黑體', 'Microsoft JhengHei', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            background-color: var(--card-background-color);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border-radius: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            overflow: hidden;
+            position: relative; /* 讓 profile-image-container 可以相對於 container 定位 */
+        }
+
+        /* --- 頭像樣式 --- */
+        .profile-image-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid var(--secondary-color);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        }
+
+        .profile-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* --- 側邊欄 (聯絡資訊、技能) --- */
+        .sidebar {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 30px;
+            width: 35%;
+            box-sizing: border-box;
+        }
+
+        .sidebar h2 {
+            color: var(--secondary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-top: 0;
+            font-size: 1.4em;
+        }
+
+        .contact-info p {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-info a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .contact-info svg {
+            margin-right: 12px;
+            fill: white;
+            width: 18px;
+            height: 18px;
+        }
+
+        .skills-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills-list li {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            padding: 8px 12px;
+            margin-bottom: 8px;
+            font-size: 0.95em;
+        }
+        
+        /* --- 主要內容區 --- */
+        .main-content {
+            padding: 40px;
+            width: 65%;
+            box-sizing: border-box;
+        }
+
+        header h1 {
+            font-size: 2.8em;
+            margin: 0;
+            color: var(--primary-color);
+        }
+
+        header .job-title {
+            font-size: 1.5em;
+            color: var(--secondary-color);
+            margin-top: 5px;
+            font-weight: 300;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            font-size: 1.8em;
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--background-color);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .section p {
+            text-align: justify;
+        }
+        
+        .timeline-item {
+            margin-bottom: 20px;
+        }
+
+        .timeline-item h3 {
+            margin: 0;
+            font-size: 1.2em;
+            color: var(--text-color);
+        }
+        
+        .timeline-item .institution {
+             font-weight: bold;
+             color: var(--secondary-color);
+        }
+
+        .timeline-item .date {
+            font-size: 0.9em;
+            color: var(--light-text-color);
+            margin-bottom: 5px;
+        }
+
+        /* --- 響應式設計 --- */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                margin: 0;
+                border-radius: 0;
+            }
+
+            .sidebar, .main-content {
+                width: 100%;
+            }
+
+            .main-content {
+                padding: 30px 20px;
+            }
+            
+            header h1 {
+                font-size: 2.2em;
+            }
+            header .job-title {
+                font-size: 1.3em;
+            }
+
+            .profile-image-container {
+                top: 10px;
+                right: 10px;
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="profile-image-container">
+            <img src="profile.png" alt="個人頭像">
+        </div>
+        
+        <aside class="sidebar">
+            <section class="contact-info">
+                <h2>聯絡方式</h2>
+                <p>
+                    <svg viewBox="0 0 24 24"><path d="M20,4H4C2.9,4,2,4.9,2,6v12c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V6C22,4.9,21.1,4,20,4z M20,8l-8,5L4,8V6l8,5l8-5V8z"/></svg>
+                    <a href="mailto:ctrlfmnalt44@gmail.com">ctrlfmnalt44@gmail.com</a>  
+                </p>
+                <p>
+                    <svg viewBox="0 0 24 24"><path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z"/></svg>
+                    0979-622-715  
+                </p>
+                <p>
+                    <svg viewBox="0 0 24 24"><path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z"/></svg>
+                    台中市龍井區  
+                </p>
+            </section>
+
+            <section class="skills">
+                <h2>專業技能</h2>
+                <ul class="skills-list">
+                    <li>電腦硬體組裝與拆解  </li>
+                    <li>硬體故障排除與維修  </li>
+                    <li>作業系統安裝與設定 (Windows/Linux)  </li>
+                    <li>基本網路設定與問題排解  </li>
+                </ul>
+            </section>
+            
+            <section class="languages">
+                <h2>語言能力</h2>
+                <ul class="skills-list">
+                    <li>中文 (國語/台語)  </li>
+                    <li>英文  </li>
+                </ul>
+            </section>
+
+            <section class="traits">
+                <h2>性格特點</h2>
+                <ul class="skills-list">
+                    <li>細心謹慎  </li>
+                    <li>問題解決導向  </li>
+                    <li>持續學習  </li>
+                    <li>客戶服務  </li>
+                </ul>
+            </section>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <h1>劉科宏  </h1>
+                <div class="job-title">電腦組裝/維修工程師  </div>
+            </header>
+
+            <section class="summary section">
+                <h2>摘要</h2>
+                <p>您好,我是劉科宏,一位對拆解、組裝、優化電腦系統充滿熱情的嶺東科技大學資訊科技系畢業生。   學生時期成功挑戰並取得了「乙級電腦硬體裝修技術士」證照。   此外,我也持有丙級電腦硬體裝修、工業電子及LibreOffice 等證照。  </p>
+            </section>
+            
+            <section class="experience section">
+                <h2>工作經驗</h2>
+                <div class="timeline-item">
+                     <p>無  </p>
+                </div>
+            </section>
+
+            <section class="education section">
+                <h2>學歷</h2>
+                <div class="timeline-item">
+                    <h3>資訊科技系學士  </h3>
+                    <div class="institution">嶺東科技大學  </div>
+                    <div class="date">2020年6月 - 2023年6月  </div>
+                </div>
+            </section>
+
+            <section class="certifications section">
+                <h2>專業證照</h2>
+                 <div class="timeline-item">
+                    <ul style="padding-left: 20px;">
+                        <li>乙級電腦硬體裝修技術士  </li>
+                        <li>丙級電腦硬體裝修  </li>
+                        <li>丙級工業電子  </li>
+                        <li>LibreOffice  </li>
+                    </ul>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>
